@@ -4080,6 +4080,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Student
       objectReference: {fileID: 0}
+    - target: {fileID: 6495319692556129974, guid: 69a045671377a4bce89eb53102e9bb30, type: 3}
+      propertyPath: m_TagString
+      value: student
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a045671377a4bce89eb53102e9bb30, type: 3}
 --- !u!1001 &7025303053465546637

@@ -20,7 +20,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         ProcessInputs();
-    }
+        if (Input.GetKeyDown (KeyCode.E)) {
+                var go = FindClosestObjectWithTag ("student");
+                GameObject.Destroy (go);
+                gameHandlerObj.AddScore(1);
+        }
+}
+    
     
     void FixedUpdate()
     {
@@ -40,10 +46,25 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
     }
 
-    void OnCollisionEnter2D(Collision2D other){
-          if (other.gameObject.tag == "enemy"){
-               Destroy(other.gameObject);
-               gameHandlerObj.AddScore(1);
-          }
-     }
+        
+
+        public GameObject FindClosestObjectWithTag(string tagName)
+        {
+            GameObject[] gos;
+            gos = GameObject.FindGameObjectsWithTag(tagName);
+            GameObject closest = null;
+            float distance = (Mathf.Infinity); //max radius size
+ 
+            foreach (GameObject go in gos)
+            {
+                Vector3 diff = go.transform.position - transform.position;
+                float curDistance = diff.sqrMagnitude;
+                if (curDistance < distance)
+                {
+                    closest = go;
+                    distance = curDistance;
+                }
+            }
+            return closest;
+        }
 }
