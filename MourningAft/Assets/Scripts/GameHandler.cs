@@ -11,6 +11,7 @@ public class GameHandler : MonoBehaviour {
         public GameObject timeText;
         public GameObject gameOverText;
         private int playerScore = 0;
+        public int suspicion = 0;
 
         public int gameTime = 20;
         private float gameTimer = 0f;

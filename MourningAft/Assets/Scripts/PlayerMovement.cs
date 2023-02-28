@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     void Start(){
          if (GameObject.FindWithTag("GameHandler") != null){ 
                gameHandlerObj = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
-          }
+         }
     }
 
     // Update is called once per frame
