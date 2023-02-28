@@ -22,8 +22,11 @@ public class PlayerMovement : MonoBehaviour
         ProcessInputs();
         if (Input.GetKeyDown (KeyCode.E)) {
                 var go = FindClosestObjectWithTag ("student");
-                GameObject.Destroy (go);
-                gameHandlerObj.AddScore(1);
+                if (go != null) {
+                        GameObject.Destroy (go);
+                        gameHandlerObj.AddScore(1);
+                }
+                
         }
 }
     
@@ -53,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
             GameObject[] gos;
             gos = GameObject.FindGameObjectsWithTag(tagName);
             GameObject closest = null;
-            float distance = (Mathf.Infinity); //max radius size
+            float distance = 3;
  
             foreach (GameObject go in gos)
             {

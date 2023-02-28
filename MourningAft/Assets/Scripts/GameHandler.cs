@@ -80,7 +80,7 @@ public class GameHandler : MonoBehaviour {
                                 gameTimer = 0;
                                 UpdateTime();
                 }
-                if (gameTime <= 0){ 
+                if (gameTime <= 0 || playerScore >=5){ 
                                 gameTime = 0; 
                                 gameOverText.SetActive(true);
                 }
