@@ -14889,6 +14889,10 @@ PrefabInstance:
       propertyPath: moveSpots.Array.data[6]
       value: 
       objectReference: {fileID: 2010476316}
+    - target: {fileID: 3008618941186838706, guid: 9cef866796d234f4e9c5edb0eab04a1b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1772705224, guid: 6518f171598ac41a99232c96a2e42e7c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cef866796d234f4e9c5edb0eab04a1b, type: 3}
 --- !u!1 &836149267
@@ -17580,6 +17584,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6706411884003724737, guid: ebe484660118e443bb8512a0419b4506, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -833691139, guid: 6518f171598ac41a99232c96a2e42e7c, type: 3}
     - target: {fileID: 7025303054048445257, guid: ebe484660118e443bb8512a0419b4506, type: 3}
       propertyPath: m_Name
       value: Player
