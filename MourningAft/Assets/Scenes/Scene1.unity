@@ -16624,8 +16624,8 @@ MonoBehaviour:
   spawnPoint3: {fileID: 2100050832}
   spawnPoint4: {fileID: 193634033}
   spawnPoint5: {fileID: 579749829}
-  spawnRangeStart: 1
-  spawnRangeEnd: 2
+  spawnRangeStart: 3
+  spawnRangeEnd: 4
 --- !u!1001 &1918075560
 PrefabInstance:
   m_ObjectHideFlags: 0
