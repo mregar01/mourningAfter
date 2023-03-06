@@ -50,6 +50,20 @@ public class CopPatrolHit : MonoBehaviour {
                 playerInRadius = true;
                 if (gameHandlerObj.getPlayerCarryingBody()) {
                     print("Policeman: found player carrying a body");
+                    gameHandlerObj.suspicion++;
+                    if (gameHandlerObj.suspicion == 1){
+                        gameHandlerObj.noSuspicion.SetActive(false);
+                        gameHandlerObj.oneSuspicion.SetActive(true);
+                    }
+                    if (gameHandlerObj.suspicion == 2){
+                        gameHandlerObj.oneSuspicion.SetActive(false);
+                        gameHandlerObj.twoSuspicion.SetActive(true);
+                    }
+                    if (gameHandlerObj.suspicion == 3){
+                        gameHandlerObj.twoSuspicion.SetActive(false);
+                        gameHandlerObj.threeSuspicion.SetActive(true);
+                    }
+
                 }
                 copNPC = collision.gameObject.transform;
            }

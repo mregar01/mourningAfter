@@ -10,6 +10,11 @@ public class GameHandler : MonoBehaviour {
         public GameObject scoreText;
         public GameObject timeText;
         public GameObject gameOverText;
+        public GameObject noSuspicion;
+        public GameObject oneSuspicion;
+        public GameObject twoSuspicion;
+        public GameObject threeSuspicion;
+
         private int playerScore = 0;
         public int suspicion = 0;
         public bool playerCarryingBody = false;
@@ -35,6 +40,10 @@ public class GameHandler : MonoBehaviour {
         void Start(){
                 UpdateScore();
                 gameOverText.SetActive(false); 
+                noSuspicion.SetActive(true);
+                oneSuspicion.SetActive(false);
+                twoSuspicion.SetActive(false);
+                threeSuspicion.SetActive(false);
                 UpdateTime(); 
 
                 pauseMenuUI.SetActive(false); // audio
@@ -89,7 +98,7 @@ public class GameHandler : MonoBehaviour {
                                 gameTimer = 0;
                                 UpdateTime();
                 }
-                if (gameTime <= 0 || playerScore >=5){ 
+                if (gameTime <= 0 || playerScore >=5 || suspicion >= 4){ 
                                 gameTime = 0; 
                                 gameOverText.SetActive(true);
                 }
