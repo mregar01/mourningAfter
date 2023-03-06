@@ -19,11 +19,22 @@ public class Truck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerInRadiusTruck) {
-            print("player close to truck");
-        } else {
-            print("player far from truck");
+        if (Input.GetKeyDown (KeyCode.E) && playerInRadiusTruck) {
+            // needs check for whether mortician is carrying student - via gameHandlerObj?
+            if (gameHandlerObj.getPlayerCarryingBody()) {
+                print("depositing body in truck");
+                gameHandlerObj.AddScore(1);
+                gameHandlerObj.UpdatePlayerCarryingBody(false);
+            } else {
+                print("tried depositing body in truck, not carrying student");
+            }
         }
+
+        // if (playerInRadiusTruck) {
+        //     print("player close to truck");
+        // } else {
+        //     print("player far from truck");
+        // }
     }
 
     private void OnTriggerEnter2D(Collider2D collision){

@@ -34,15 +34,15 @@ public class CopPatrolHit : MonoBehaviour {
                } 
            }
            
-           if (playerInRadius){
-               print("player found");
-               gameHandlerObj.suspicion = 5;
-               print(gameHandlerObj.suspicion);
-           } else {
-               print("player lost");
-               gameHandlerObj.suspicion = 0;
-               print(gameHandlerObj.suspicion);
-           }
+        //    if (playerInRadius){
+        //        print("player found");
+        //        gameHandlerObj.suspicion = 5;
+        //        print(gameHandlerObj.suspicion);
+        //    } else {
+        //        print("player lost");
+        //        gameHandlerObj.suspicion = 0;
+        //        print(gameHandlerObj.suspicion);
+        //    }
        }
        
        private void OnTriggerEnter2D(Collider2D collision){

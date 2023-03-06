@@ -49335,16 +49335,6 @@ MonoBehaviour:
   - {fileID: 574632582}
   spots:
   - {fileID: 428876220}
-  - {fileID: 579749829}
-  - {fileID: 2100050832}
-  - {fileID: 568145177}
-  - {fileID: 1876594666}
-  - {fileID: 193634033}
-  - {fileID: 2010476316}
-  - {fileID: 1894665100}
-  - {fileID: 2032052565}
-  - {fileID: 225809357}
-  - {fileID: 1983913785}
   spawnRangeStart: 1
   spawnRangeEnd: 2
   gameHandlerObj: {fileID: 0}
@@ -49791,7 +49781,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
