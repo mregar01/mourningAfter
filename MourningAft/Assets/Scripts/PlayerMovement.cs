@@ -51,23 +51,23 @@ public class PlayerMovement : MonoBehaviour
 
         
 
-        public GameObject FindClosestObjectWithTag(string tagName)
+    public GameObject FindClosestObjectWithTag(string tagName)
+    {
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag(tagName);
+        GameObject closest = null;
+        float distance = 3;
+
+        foreach (GameObject go in gos)
         {
-            GameObject[] gos;
-            gos = GameObject.FindGameObjectsWithTag(tagName);
-            GameObject closest = null;
-            float distance = 3;
- 
-            foreach (GameObject go in gos)
+            Vector3 diff = go.transform.position - transform.position;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
             {
-                Vector3 diff = go.transform.position - transform.position;
-                float curDistance = diff.sqrMagnitude;
-                if (curDistance < distance)
-                {
-                    closest = go;
-                    distance = curDistance;
-                }
+                closest = go;
+                distance = curDistance;
             }
-            return closest;
         }
+        return closest;
+    }
 }

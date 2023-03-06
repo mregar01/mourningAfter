@@ -12,7 +12,7 @@ public class CopPatrolHit : MonoBehaviour {
        public float startWaitTime;
        private string detectionTag = "Player";
        public bool playerInRadius;
-       public float raidus;
+       public float raidus; // radius
        public GameHandler gameHandlerObj;
        
        void Start(){
