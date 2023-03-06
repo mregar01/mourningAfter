@@ -12,6 +12,7 @@ public class GameHandler : MonoBehaviour {
         public GameObject gameOverText;
         private int playerScore = 0;
         public int suspicion = 0;
+        public bool playerCarryingBody = false;
 
         public int gameTime = 20;
         private float gameTimer = 0f;
@@ -71,6 +72,14 @@ public class GameHandler : MonoBehaviour {
         public void AddScore(int points){
                 playerScore += points;
                 UpdateScore();
+        }
+
+        public void UpdatePlayerCarryingBody(bool carryingbody) {
+                playerCarryingBody = carryingbody;
+        }
+
+        public bool getPlayerCarryingBody() {
+                return playerCarryingBody;
         }
 
         void FixedUpdate(){

@@ -34,21 +34,24 @@ public class CopPatrolHit : MonoBehaviour {
                } 
            }
            
-           if (playerInRadius){
-               print("player found");
-               gameHandlerObj.suspicion = 5;
-               print(gameHandlerObj.suspicion);
-           } else {
-               print("player lost");
-               gameHandlerObj.suspicion = 0;
-               print(gameHandlerObj.suspicion);
-           }
+        //    if (playerInRadius){
+        //        print("player found");
+        //        gameHandlerObj.suspicion = 5;
+        //        print(gameHandlerObj.suspicion);
+        //    } else {
+        //        print("player lost");
+        //        gameHandlerObj.suspicion = 0;
+        //        print(gameHandlerObj.suspicion);
+        //    }
        }
        
        private void OnTriggerEnter2D(Collider2D collision){
            if (collision.CompareTag(detectionTag)){
-               playerInRadius = true;
-               copNPC = collision.gameObject.transform;
+                playerInRadius = true;
+                if (gameHandlerObj.getPlayerCarryingBody()) {
+                    print("Policeman: found player carrying a body");
+                }
+                copNPC = collision.gameObject.transform;
            }
        }
        

@@ -24,7 +24,9 @@ public class PlayerMovement : MonoBehaviour
                 var go = FindClosestObjectWithTag ("student");
                 if (go != null) {
                         GameObject.Destroy (go);
-                        gameHandlerObj.AddScore(1);
+                        print("picked up student");
+                        // gameHandlerObj.AddScore(1);
+                        gameHandlerObj.UpdatePlayerCarryingBody(true);
                 }
                 
         }
