@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveDirection;
     // Start is called before the first frame update
     void Start(){
+        anim = GetComponentInChildren<Animator>();
          if (GameObject.FindWithTag("GameHandler") != null){ 
                gameHandlerObj = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
          }
