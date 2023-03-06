@@ -49132,7 +49132,7 @@ GameObject:
   - component: {fileID: 1250135419}
   - component: {fileID: 1250135418}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: TileMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51518,6 +51518,18 @@ PrefabInstance:
     - target: {fileID: 2487473956517175089, guid: eac18f85559eb483d93b601d60afb213, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487473956847676573, guid: eac18f85559eb483d93b601d60afb213, type: 3}
+      propertyPath: m_Color.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487473956847676573, guid: eac18f85559eb483d93b601d60afb213, type: 3}
+      propertyPath: m_Color.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487473956847676573, guid: eac18f85559eb483d93b601d60afb213, type: 3}
+      propertyPath: m_Color.r
+      value: 0.21960786
       objectReference: {fileID: 0}
     - target: {fileID: 4282886935059504529, guid: eac18f85559eb483d93b601d60afb213, type: 3}
       propertyPath: m_RootOrder
