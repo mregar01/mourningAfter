@@ -5,7 +5,6 @@ using UnityEngine;
 public class CopPatrolHit : MonoBehaviour {
     
        public float speed;
-       
        public Transform[] moveSpots;
        public Transform copNPC;
        private int randomSpot;
@@ -59,4 +58,5 @@ public class CopPatrolHit : MonoBehaviour {
                copNPC = null;
            }
        }
+      
 }
