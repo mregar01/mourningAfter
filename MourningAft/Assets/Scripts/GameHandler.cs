@@ -10,6 +10,7 @@ public class GameHandler : MonoBehaviour {
         public GameObject scoreText;
         public GameObject timeText;
         public GameObject gameOverText;
+        public GameObject gameWonText;
         public GameObject noSuspicion;
         public GameObject oneSuspicion;
         public GameObject twoSuspicion;
@@ -40,6 +41,7 @@ public class GameHandler : MonoBehaviour {
         void Start(){
                 UpdateScore();
                 gameOverText.SetActive(false); 
+                gameWonText.SetActive(false);
                 noSuspicion.SetActive(true);
                 oneSuspicion.SetActive(false);
                 twoSuspicion.SetActive(false);
@@ -98,9 +100,14 @@ public class GameHandler : MonoBehaviour {
                                 gameTimer = 0;
                                 UpdateTime();
                 }
-                if (gameTime <= 0 || playerScore >=5 || suspicion >= 4){ 
+                if (gameTime <= 0 || suspicion >= 4){ 
+                                print("game over");
                                 gameTime = 0; 
                                 gameOverText.SetActive(true);
+                }
+                if (playerScore >=5) {
+                        gameTime = 0;
+                        gameWonText.SetActive(true);
                 }
         }
 

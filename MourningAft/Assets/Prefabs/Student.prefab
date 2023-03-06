@@ -133,6 +133,13 @@ MonoBehaviour:
   isAlive: 0
   isBoy: 0
   wasKilled: 0
+  studentObj: {fileID: 0}
+  carrying: {fileID: 0}
+  notCarrying: {fileID: 0}
+  gameHandlerObj: {fileID: 0}
+  speed: 0
+  moveSpots: []
+  startWaitTime: 0
 --- !u!212 &675449161044109057
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -174,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1190771720, guid: 6518f171598ac41a99232c96a2e42e7c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -182,6 +189,6 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
