@@ -47,8 +47,11 @@ public class CopPatrolHit : MonoBehaviour {
        
        private void OnTriggerEnter2D(Collider2D collision){
            if (collision.CompareTag(detectionTag)){
-               playerInRadius = true;
-               copNPC = collision.gameObject.transform;
+                playerInRadius = true;
+                if (gameHandlerObj.getPlayerCarryingBody()) {
+                    print("Policeman: found player carrying a body");
+                }
+                copNPC = collision.gameObject.transform;
            }
        }
        
