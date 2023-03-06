@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public Rigidbody2D rb;
     public GameHandler gameHandlerObj;
+//     public GameObject carrying;
+//     public GameObject notCarrying;
     
     private Vector2 moveDirection;
     // Start is called before the first frame update
@@ -14,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
          if (GameObject.FindWithTag("GameHandler") != null){ 
                gameHandlerObj = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
          }
+        //  carrying.SetActive(false);
+        //  notCarrying.SetActive(true);
     }
 
     // Update is called once per frame
@@ -30,6 +34,13 @@ public class PlayerMovement : MonoBehaviour
                 }
                 
         }
+        // if (gameHandlerObj.playerCarryingBody == true){
+        //       carrying.SetActive(true);
+        //       notCarrying.SetActive(false);  
+        // } else {
+        //       carrying.SetActive(false);
+        //       notCarrying.SetActive(true);
+        // }
     }
     
     
