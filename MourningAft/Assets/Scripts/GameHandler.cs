@@ -121,8 +121,20 @@ public class GameHandler : MonoBehaviour {
                 timeTextB.text = "" + gameTime;
         }
 
-        public void StartGame(){
+        public void StartGameEasy(){
                 SceneManager.LoadScene("Scene1");
+        }
+
+        public void StartGameMedium(){
+                SceneManager.LoadScene("Scene2");
+        }
+
+        public void StartGameHard(){
+                SceneManager.LoadScene("Scene3");
+        }
+
+        public void StartGameImpossible(){
+                SceneManager.LoadScene("Scene4");
         }
 
         public void OpenCredits(){
