@@ -7,16 +7,20 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public Rigidbody2D rb;
     public GameHandler gameHandlerObj;
+
+    
+    
 //     public GameObject carrying;
 //     public GameObject notCarrying;
     
     private Vector2 moveDirection;
     // Start is called before the first frame update
     void Start(){
-        anim = GetComponentInChildren<Animator>();
-         if (GameObject.FindWithTag("GameHandler") != null){ 
+        var anim = GetComponentInChildren<Animator>();
+        if (GameObject.FindWithTag("GameHandler") != null){ 
                gameHandlerObj = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
-         }
+        }
+        
         //  carrying.SetActive(false);
         //  notCarrying.SetActive(true);
     }
@@ -25,13 +29,14 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         ProcessInputs();
-        if (Input.GetKeyDown (KeyCode.E)) {
+        if (Input.GetKeyDown (KeyCode.E) && !gameHandlerObj.getPlayerCarryingBody()) {
                 var go = FindClosestObjectWithTag ("student");
                 if (go != null) {
                         GameObject.Destroy (go);
                         print("picked up student");
                         // gameHandlerObj.AddScore(1);
                         gameHandlerObj.UpdatePlayerCarryingBody(true);
+                        
                 }
                 
         }
